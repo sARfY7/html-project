@@ -1,0 +1,309 @@
+/* =============================================== */
+/* Font Import */
+/* =============================================== */
+@font-face {
+  font-family: 'FloodStd';
+  src: url('../fonts/FloodStd.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* =============================================== */
+/* Reset */
+/* =============================================== */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #354463;
+}
+
+a:link,
+a:visited {
+  color: #354463;
+}
+
+/* =============================================== */
+/* Common */
+/* =============================================== */
+.btn {
+  background-color: #c1f7d5;
+  color: #354463;
+  border-radius: 10rem;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  min-width: 1.6rem;
+  height: 4.8rem;
+  padding: 0 1.8rem;
+  white-space: nowrap;
+}
+
+.stylized-text-container {
+  max-width: 50rem;
+}
+
+.stylized-text {
+  font-family: FloodStd;
+  color: #ffffff;
+}
+
+.stylized-text--big {
+  font-size: 7.2rem;
+}
+
+.stylized-text--small {
+  font-size: 4.4rem;
+}
+
+.pill-container--overlapped {
+  position: relative;
+  margin-bottom: -1.5rem;
+  z-index: 100;
+}
+
+.pill-container--padded {
+  padding-left: 5rem;
+}
+
+.pill-container--centered {
+  display: flex;
+  justify-content: center;
+}
+
+.pill {
+  width: 16rem;
+  padding: 0.6rem 1.6rem;
+  font-style: 1.4rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill--blue {
+  background-color: #354463;
+  color: #ffffff;
+}
+
+.pill--white {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.container {
+  position: relative;
+  object-fit: cover;
+}
+
+.inner-container {
+  padding: 0 16rem;
+}
+
+.inner-container__content {
+  display: flex;
+  padding-top: 12.8rem;
+  padding-bottom: 12.8rem;
+}
+
+.inner-container__content__block:not(:last-child) {
+  margin-right: 15.5rem;
+}
+
+@media (max-width: 1350px) {
+  .inner-container__content__block:not(:last-child) {
+    margin-right: 9.5rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .stylized-text-container {
+    max-width: 18rem;
+  }
+
+  .stylized-text--big {
+    font-size: 4.4rem;
+  }
+
+  .pill-container--padded {
+    padding-left: 6.4rem;
+  }
+
+  .inner-container {
+    padding: 2rem 6.4rem;
+  }
+
+  .inner-container__content__block:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .btn {
+    height: 4rem;
+  }
+
+  .pill-container--padded {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .inner-container {
+    padding: 3.2rem;
+  }
+}
+
+/* =============================================== */
+/* Nav */
+/* =============================================== */
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12.8rem;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 7rem;
+}
+
+.nav__logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #354463;
+}
+
+.nav__links {
+  display: flex;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav__link:not(:last-child) {
+  margin-right: 13rem;
+}
+
+@media (max-width: 1250px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav__logo {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .nav__container {
+    flex-direction: column;
+    padding: 4rem 0;
+    height: 20rem;
+  }
+
+  .nav {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    flex-direction: row;
+  }
+
+  .nav__logo {
+    font-size: 1.8rem;
+  }
+
+  .nav__links {
+    flex-direction: column;
+  }
+
+  .nav__link:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .nav__btn,
+  .nav__btn > .btn {
+    width: 100%;
+  }
+}
+
+/* =============================================== */
+/* Banner Area */
+/* =============================================== */
+.banner {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner__card {
+  max-width: 74.4rem;
+  background-color: #ffffff;
+  padding: 7.5rem 6.4rem;
+}
+
+.banner__card__text {
+  font-size: 4.4rem;
+  margin-bottom: 2.8rem;
+}
+
+@media (max-width: 1450px) {
+  .banner {
+    height: 100%;
+  }
+
+  .banner__card {
+    max-width: 74.4rem;
+  }
+}
+
+@media (max-width: 1320px) {
+  .banner__card {
+    max-width: 104.4rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .banner__content {
+    flex-direction: column-reverse;
+  }
+
+  .banner__card {
+    max-width: 100%;
+    padding: 6.4rem;
+  }
+
+  .banner__card__text {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .banner__card {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .banner__card__text {
+    font-size: 2.2rem;
+  }
+}
