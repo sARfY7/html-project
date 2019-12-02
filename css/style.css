@@ -95,6 +95,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 .pill--blue {
@@ -151,6 +152,12 @@ a:visited {
 
   .inner-container__content__block:not(:last-child) {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .inner-container__content__block:nth-child(1) {
+    margin-bottom: 8rem;
   }
 }
 
@@ -501,5 +508,73 @@ a:visited {
   .work__card__btn {
     padding-top: 0;
     padding-right: 0;
+  }
+}
+
+/* =============================================== */
+/* Facts */
+/* =============================================== */
+.facts__card__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.facts__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.facts__card {
+  position: relative;
+  background-color: #ffffff;
+  padding: 5.6rem;
+  display: flex;
+}
+
+.facts__card:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+.facts__card__content {
+  margin-right: 2rem;
+}
+
+.facts__card__title {
+  margin-bottom: 1rem;
+}
+
+.facts__card__icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.facts__card__icons__container {
+  background-color: #c1f7d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.facts__card__icons__container:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 950px) {
+  .facts__card__container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .facts__card {
+    padding: 3.6rem;
   }
 }
