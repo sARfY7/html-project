@@ -53,6 +53,7 @@ a:visited {
 
 .stylized-text-container {
   max-width: 50rem;
+  margin-bottom: 5rem;
 }
 
 .stylized-text {
@@ -69,13 +70,16 @@ a:visited {
 }
 
 .pill-container--overlapped {
-  position: relative;
-  margin-bottom: -1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -1.5rem;
   z-index: 100;
 }
 
 .pill-container--padded {
-  padding-left: 5rem;
+  padding-left: inherit;
 }
 
 .pill-container--centered {
@@ -142,7 +146,7 @@ a:visited {
   }
 
   .inner-container {
-    padding: 2rem 6.4rem;
+    padding: 8rem 6.4rem;
   }
 
   .inner-container__content__block:not(:last-child) {
@@ -205,6 +209,11 @@ a:visited {
 }
 
 @media (max-width: 1250px) {
+  nav .inner-container {
+    padding-top: 2rem;
+    padding-bottom: 1.6rem;
+  }
+
   .nav {
     flex-direction: column;
   }
@@ -236,6 +245,7 @@ a:visited {
   }
 
   .nav__link:not(:last-child) {
+    margin-right: 0;
     margin-bottom: 1rem;
   }
 
@@ -246,16 +256,18 @@ a:visited {
 }
 
 /* =============================================== */
-/* Banner Area */
+/* Banner */
 /* =============================================== */
 .banner {
   position: absolute;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }
 
 .banner__card {
+  position: relative;
   max-width: 74.4rem;
   background-color: #ffffff;
   padding: 7.5rem 6.4rem;
@@ -267,10 +279,6 @@ a:visited {
 }
 
 @media (max-width: 1450px) {
-  .banner {
-    height: 100%;
-  }
-
   .banner__card {
     max-width: 74.4rem;
   }
@@ -301,9 +309,41 @@ a:visited {
   .banner__card {
     padding: 3rem 1.5rem;
     text-align: center;
+    margin-bottom: 4rem;
   }
 
   .banner__card__text {
     font-size: 2.2rem;
+  }
+}
+
+/* =============================================== */
+/* Banner Point Cards */
+/* =============================================== */
+.banner__point-cards {
+  background-color: #c1f7d5;
+}
+
+.banner__point-cards__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5.6rem;
+  padding-top: 7.2rem;
+  padding-bottom: 7.2rem;
+}
+
+.banner__point-card__title {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1250px) {
+  .banner__point-cards__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .banner__point-cards__container {
+    gap: 3.6rem;
   }
 }
