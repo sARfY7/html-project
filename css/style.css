@@ -82,6 +82,10 @@ a:visited {
   padding-left: inherit;
 }
 
+.pill-container--self-padded {
+  padding-left: 6.4rem;
+}
+
 .pill-container--centered {
   display: flex;
   justify-content: center;
@@ -172,6 +176,12 @@ a:visited {
   }
 
   .pill-container--padded {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pill-container--self-padded {
     padding: 0;
     display: flex;
     justify-content: center;
@@ -576,5 +586,88 @@ a:visited {
 @media (max-width: 520px) {
   .facts__card {
     padding: 3.6rem;
+  }
+}
+
+/* =============================================== */
+/* Stories */
+/* =============================================== */
+.stories {
+  padding-top: 12.8rem;
+  padding-bottom: 12.8rem;
+}
+
+.stories__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.stories__card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #354463;
+  color: #ffffff;
+  padding: 6.4rem;
+}
+
+.stories__card__quotedby {
+  margin-top: 2.8rem;
+  font-size: 1.4rem;
+}
+
+.stories__btn {
+  position: absolute;
+  bottom: 0;
+}
+
+.stories__img {
+  position: relative;
+  margin-left: -6.4rem;
+}
+
+@media (max-width: 1300px) {
+  .stories {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+
+  .stories__container {
+    flex-direction: column-reverse;
+    align-items: initial;
+  }
+
+  .stories__content {
+    padding-left: 6.4rem;
+    margin-top: -6.4rem;
+  }
+
+  .stories__btn {
+    margin-top: 2.5rem;
+    position: static;
+  }
+
+  .stories__img {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .stories__content {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+  .stories__content,
+  .stories__btn {
+    text-align: center;
+  }
+
+  .stories__card {
+    padding: 3.2rem;
+  }
+
+  .stories__img > img {
+    width: 100%;
   }
 }
