@@ -35,6 +35,15 @@ a:visited {
   color: #354463;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
 /* =============================================== */
 /* Common */
 /* =============================================== */
@@ -1212,8 +1221,137 @@ a:visited {
   }
 }
 
+@media (max-width: 1250px) {
+  .impact {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .impact__point-card__container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* =============================================== */
+/* Look-Back */
+/* =============================================== */
+.look-back {
+  background-color: #354463;
+  padding-top: 12.8rem;
+  padding-bottom: 12.8rem;
+  overflow-x: hidden;
+}
+
+.look-back__heading__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.look-back__heading__icon__container {
+  margin-left: 6.4rem;
+}
+
+.look-back__heading__icon {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c1f7d5;
+  width: 6.4rem;
+  height: 6.4rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.look-back__card__container {
+  display: flex;
+}
+
+.look-back__card {
+  position: relative;
+  background-color: #ffffff;
+  width: 54.5rem;
+}
+
+.look-back__card:not(:last-child) {
+  margin-right: 3.2rem;
+}
+
+.look-back__card__content {
+  padding: 6.4rem;
+}
+
+.look-back__card__title {
+  margin-bottom: 2.4rem;
+}
+
+.look-back__card__body {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.look-back__carousel__dot__container {
+  display: none;
+  margin-top: 3.4rem;
+}
+
+.look-back__carousel__dot {
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid #ffffff;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.look-back__carousel__dot:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.look-back__carousel__dot--active {
+  background-color: #354463;
+}
+
+@media (max-width: 1250px) {
+  .look-back {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .look-back__heading__icon__container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 2rem;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .look-back__heading__icon {
+    padding: 0.5rem;
+  }
+
+  .look-back__carousel__dot__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .look-back__card {
+    min-width: 100%;
+  }
+
+  .look-back__card__img > img {
+    width: 100%;
+  }
+
+  .look-back__card__content {
+    padding: 3.2rem;
+  }
+
+  .look-back__card__title {
+    font-size: 1.4rem;
   }
 }
